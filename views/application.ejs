@@ -1,0 +1,181 @@
+<%- include('genralheader') %>
+    <div class="container">
+        <h1 class="mt-5" style="margin-bottom: -2rem;">Application</h1>
+        <h2 style="margin-left: 40rem;">Scoring guide</h2>
+        <hr>
+        <div class="row">
+            <div class="col col-lg-4 " style="border-right: 0.1rem solid rgb(223,214,214);">
+                <div class="row">
+                    <% application.forEach(application => { %>
+                        <img style="max-width: 150px; margin-left: 2rem;border-radius: 100%;"  src="/uploads/<%=application.profilePicture %>" alt="">
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Student Name:
+                    </div>
+                    <div class="col">
+                        <%= application.fname%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Father Name:
+                    </div>
+                    <div class="col">
+                        <%= application.fatherName%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Gender:
+                    </div>
+                    <div class="col">
+                        <%= application.gender%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Email:
+                    </div>
+                    <div class="col">
+                        <%= application.email%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Age:
+                    </div>
+                    <div class="col">
+                        <%= application.age%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Date of Birth:
+                    </div>
+                    <div class="col">
+                        <%= application.dob%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Phone:
+                    </div>
+                    <div class="col">
+                        <%= application.phone%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Guardian's Phone:
+                    </div>
+                    <div class="col">
+                        <%= application.gphone%>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col col">
+                        Address:
+                    </div>
+                    <div class="col">
+                        <%= application.address%>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-left: 18rem;padding-top: 3rem;" class="col">
+                <div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>Comments</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Percentage</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>Outstanding</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Above 90s</h6>
+                    </div>
+                </div><div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>Excellent</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Between 80s</h6>
+                    </div>
+                </div><div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>Good</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Above 70s</h6>
+                    </div>
+                </div><div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>Satisfactory</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Above 60s</h6>
+                    </div>
+                </div><div class="row">
+                    <div class="col pb-2 pt-2">
+                        <h6>unsatisfactory</h6>
+                    </div>
+                    <div class="col pb-2 pt-2">
+                        <h6>Below 60s</h6>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    <hr>
+    <h3 class="mt-5">Educations Details</h3>
+    <div class="row mt-5">
+
+        <div class="col ">
+            <div class="row mb-5">
+                <h6>Last Institution Name</h6>
+            </div>
+            <div class="row">
+                <p><%= application.lastinstitution%></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row mb-5">
+                <h6>Years he studied there</h6>
+            </div>
+            <div class="row">
+                <p><%= application.yearsstudied%></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row mb-5">
+                <h6>Why he left </h6>
+            </div>
+            <div class="row">
+                <p><%= application.whyyouleft%></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row mb-5">
+                <h6>Last degree he had</h6>
+            </div>
+            <div class="row">
+                <p style="text-align: center;"><%= application.lastdegree%></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row mb-5">
+                <h6>Last degree's Percentage</h6>
+            </div>
+            <div class="row">
+                <p style="text-align: center;"><%= application.percentageinlastdegree%></p>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</div>
+    <%- include('footer') %>

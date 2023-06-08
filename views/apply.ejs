@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body style="background-image: url(img/wallpaper.jpg);background-repeat:no-repeat ;zoom:110%">
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50"
+        >
+        <div class="wrapper wrapper--w790" style="zoom:75%">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Registration Form</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/applyOnline" enctype="multipart/form-data">
+                        <h1 style="text-align: center;margin-bottom: 2rem;"><strong>Primary Details</strong> </h1>
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="fname">
+                                            <label class="label--desc">first name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="lname">
+                                            <label class="label--desc">last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Gaurdians</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="father">
+                                            <label class="label--desc">Father Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="mother">
+                                            <label class="label--desc">Mother's Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                    <label class="label--desc" for="email">Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="address" name="address">
+                                    <label class="label--desc" for="email">Address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Age</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <select class="input--style-5 form-select" name="cars" id="cars">
+                                                <option value="less then 15">less then 15</option>
+                                                <option value="more then 15"> more then 15 </option>
+                                                <option value="less then 20">less then 20</option>
+                                                <option value="more then 20">more then 20</option>
+                                              </select>
+                                            <label class="label--desc">Age</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input style="padding-top: 0;padding-bottom: 0;" type="date" class="input--style-5" id="birthday" name="birthday">
+                                            <label class="label--desc">Date Of Birth</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Gender</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Male
+                                    <input type="radio" value="male" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Female
+                                    <input type="radio" value="female" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <h1 style="text-align: center;margin-bottom: 1rem;"><strong>Education Details</strong> </h1>
+                        <div class="form-row m-b-55">
+                            <div class="name">Last Year Details</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="lastinstitution">
+                                            <label class="label--desc">Name of institution you last attended</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="yearsstudied">
+                                            <label class="label--desc">Years you studied there</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">institution info</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <select class="input--style-5 form-select" name="whyyouleft" id="cars">
+                                        <option value="Fees were high">Fees were high</option>
+                                        <option value="Rules were tough">Rules were tough</option>
+                                        <option value="Teachers were lazy">Teachers were lazy</option>
+                                        <option value="Institution was not cooperative">Institution was not cooperative</option>
+                                      </select>
+                                    <label class="label--desc" for="email">Why you left the previous institution</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Last degree</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <select class="input--style-5 form-select" name="lastdegree" id="cars">
+                                                <option value="8th Grade">8th Grade</option>
+                                                <option value="SSC I">SSC I</option>
+                                                <option value="SSC II">SSC II</option>
+                                                <option value="FSC I">FSC I</option>
+                                              </select>
+                                            <label class="label--desc" for="email">Your current Education</label>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="lastpercentage">
+                                            <label class="label--desc">Percentage</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">About You</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="about">
+                                    <label class="label--desc" for="email">Describe yourself in two lines</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Profile Picture</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="file" name="profilePicture">
+                                    <label class="label--desc" for="email">The image should not be greater then 1MB</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

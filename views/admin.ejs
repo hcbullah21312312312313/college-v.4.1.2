@@ -1,0 +1,32 @@
+<%- include('bootstrap5-header') %>
+    <div class="col mt-5 ">
+        <h2 class="navbar-brand mx-4">Recent Applications</h2>
+        <hr>       
+         <!-- I inserted dummy data in there -->
+        <% applications.forEach(application => { %>
+        <div class=" alert alert-success row applicationbar">
+            <div class="col">
+                <h5> Applicant Name </h5>
+                <h6><%= application.fname %></h6>
+            </div>
+            <div class="col">
+                <h5> Father Name </h5>
+                <h6><%= application.fatherName %></h6>
+            </div>
+            <div class="col">
+                <h5> Institituin Name </h5>
+                <h6><%= application.lastinstitution %></h6>
+            </div>
+            <div class="col">
+                <h5> Phone </h5>
+                <h6><%= application.email%></h6>
+            </div>
+        </div>
+        <div class="row ">
+            <a href="/admin/application/appId/<%=application.id%>" class="btn ml-1 btn-success">Visit Application</a>
+        </div>
+        <hr class="mt-2">
+        <% }) %>
+        <!-- I inserted dummy data in there -->
+    </div>
+    <%- include('bootstrap5-footer') %>
