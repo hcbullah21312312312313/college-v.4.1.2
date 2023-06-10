@@ -26,6 +26,7 @@ MONTHLY DUES SYSTEM
 		
 		
 	b.
+
 		if(approved==true){
 			publish an updated version of the form to database that keeps track of the history of the students so that the students can view it later.
 			And load it later within a green box saying that the payment was approved.

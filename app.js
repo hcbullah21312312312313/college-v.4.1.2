@@ -47,35 +47,10 @@ app.get('/', (req, res) =>
 app.get('/applyOnline', function (req, res) {
   res.render('apply')
 })
-// your mongoose schemas here and installing plugin to the main schema such as the one containing {username,password}
 
-const newStudentSchema = new mongoose.Schema({
-  fname: String,
-  lname: String,
-  email: String,
-  password: String,
-  dob: String,
-  address: String,
-  gender: String,
-  age: String,
-  lastinstitution: String,
-  rollno: Number,
-  class: String,
-  Sphone: String,
-  guardianPhone: String,
-  emergencyContactName: String,
-  emergencyContactPhone: String,
-  profilePicture: String
-});
+const Student = require('./module/schema.js').Student;
 
-
-//specificly passport setup
-newStudentSchema.plugin(passportLocalMongoose);
-//specificly passport setup
-
-const Student = mongoose.model('newStudent', newStudentSchema);
 passport.use(new LocalStrategy(Student.authenticate()));
-
 passport.serializeUser(Student.serializeUser());
 passport.deserializeUser(Student.deserializeUser());
 app.post('/database/add/new', async function (req, res) {
@@ -101,6 +76,7 @@ app.post('/database/add/new', async function (req, res) {
     about: req.body.about,
 
   });
+  
   newStudent.save()
   Student.register(newStudent, req.body.password, (err, user) => {
     if (err) {
@@ -155,23 +131,9 @@ app.post('/applyOnline', upload.single('profilePicture'), async function (req, r
   newApplication.save().then(() => (console.log('file uploaded')))
   res.send("Your Application has been filed succefully Yo'l be notified once your application get approved")
 })
-const reviewsSchema = new mongoose.Schema({
-  name: String,
-  department: String,
-  review: String
-})
-const ReviewsModel = mongoose.model('reviews', reviewsSchema)
-const reminderSchema = new mongoose.Schema({
-  name: String,
-  rollno: Number,
-  message: String,
-  date: String,
-  tfee: String,
-  hfee: String,
-  mfee: String,
-  trfee: String,
+const ReviewsModel = require('./module/schema.js').ReviewsModel;
 
-})
+
 //Not yet programmed
 
 app.get('/database/teacher/:teachersid', async function (req, res) {
@@ -182,7 +144,7 @@ app.get('/database/teacher/:teachersid', async function (req, res) {
 
 //Not yet programmed
 //Not yet programmed
-const RemindersModel = mongoose.model('reminders', reminderSchema)
+const RemindersModel = require('./module/schema.js').RemindersModel;
 app.get('/pay/bills', async function (req, res) {
   res.render('bills')
 })
