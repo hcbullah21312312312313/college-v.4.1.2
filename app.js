@@ -13,7 +13,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const passportLocalMongoose = require('passport-local-mongoose');
 const session = require('express-session')
-
+const slipModel=require("./module/schema.js").slipModel;
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
@@ -60,8 +60,11 @@ app.post('/database/add/new', async function (req, res) {
   const newStudent = new Student({
     fname: req.body.fname,
     lname: req.body.lname,
+    faname: req.body.faname,
+    mname: req.body.mname,
     username: req.body.email,
     password: req.body.password,
+    dues:req.body.dues,
     dob: req.body.dob,
     address: req.body.address,
     gender: req.body.gender,
@@ -164,7 +167,7 @@ var searchResult = null;
 app.post('/search/result', async function (req, res) {
   const rollno = req.body.rollno
   const StudentName = req.body.name
-  searchResult = (await StudentsModel.find({
+  searchResult = (await Student.find({
     rollno: rollno
   }))
   res.redirect('/results')
@@ -268,7 +271,6 @@ app.get('/target', async function (req, res) {
     res.redirect('/login');
     return;
   }
-
   const username = req.user.username;
   console.log(username);
 
@@ -282,7 +284,7 @@ app.get('/target', async function (req, res) {
   res.render('dashboard', { data: Varstudent });
 });
 app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`)
+  console.log(`The sever is up on port ${process.env.PORT}!`)
 )
 
 

@@ -4,9 +4,12 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const studentSchema = new mongoose.Schema({
   fname: String,
   lname: String,
+  faname: String,
+  mname: String,
   email: String,
   password: String,
   dob: String,
+  dues:Number,
   address: String,
   gender: String,
   age: String,
@@ -45,6 +48,18 @@ const reminderSchema = new mongoose.Schema({
   })
 const RemindersModel = mongoose.model('reminders', reminderSchema)
 
+const slipSchema=new mongoose.Schema({
+  name:String,
+  rollno:String,
+  class:Number,
+  tufee:Number,
+  hfee:Number,
+  trfee:Number,
+  issueDate:String,
+  dueDate:String
+})
+const slipModel=mongoose.model('Slip',slipSchema)
 module.exports = {
   Student,ReviewsModel,RemindersModel
+,slipModel
 };
